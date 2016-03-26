@@ -1,24 +1,37 @@
 package ar.edu.utn.dds.k3001.grupo3.macowins;
 
-public class Fecha {
-	private int mes;
+public class Fecha 
+{
 	private int dia;
+	private int mes;
 	private int anio;
-	 public Fecha(int diaFecha, int mesFecha, int anioFecha) {
-		 this.mes=mesFecha;
-		 this.anio=anioFecha;
-		 this.dia=diaFecha;
-	 }
-	public int getMes() {
-		return mes;
+	public Fecha(int diaF, int mesF, int anioF)
+	{
+		dia = diaF;
+		mes = mesF;
+		anio = anioF;
 	}
-	public int getDia() {
+	public Fecha()
+	{
+		dia = 10;
+		mes = 2;
+		anio = 2016;
+	}
+	public boolean esIgual(Fecha fechaAComparar)
+	{
+		boolean igualdad = (fechaAComparar.getDia() == dia && fechaAComparar.getMes() == mes && fechaAComparar.getAnio() == anio);
+		return igualdad;
+	}
+	public int getDia()
+	{
 		return dia;
 	}
-	public int getAnio() {
-		return anio;
+	public int getMes()
+	{
+		return mes;
 	}
-	 public boolean esIgualA(Fecha fecha2) {
-		 return (fecha2.getAnio()==this.getAnio() && fecha2.getMes()==this.getMes() && fecha2.getDia()==this.getDia());
-	 }
+	public int getAnio()
+	{
+		return anio;
+	}	
 }
