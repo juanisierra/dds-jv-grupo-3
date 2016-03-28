@@ -2,9 +2,9 @@ package ar.edu.utn.dds.k3001.grupo3.macowins;
 
 public class Saco extends Prenda
 {
-	public Saco()
+	public Saco(double tasaImportacion)
 	{
-		precioBase=300;
-		tasaDeImportacion=1;
+		this.precioBase=300;
+		this.tasaDeImportacion=tasaImportacion;
 	}
 }

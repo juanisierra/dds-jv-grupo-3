@@ -2,9 +2,9 @@ package ar.edu.utn.dds.k3001.grupo3.macowins;
 
 public class Camisa extends Prenda 
 {
-	public Camisa()
+	public Camisa(double tasaImportacion)
 	{
-		precioBase=200;
-		tasaDeImportacion=1;
+		this.precioBase=200;
+		this.tasaDeImportacion=tasaImportacion;
 	}
 }
