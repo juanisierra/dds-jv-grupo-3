@@ -14,4 +14,8 @@ public abstract class Prenda
 	{
 		Prenda.valorDelNegocio = valorDelNegocio;
 	}
+	
+	public void esImportada(){
+		tasaDeImportacion = 0.3;
+	}
 }

@@ -5,11 +5,16 @@ public class Venta
 	private Prenda prendaVendida;
 	private int cantidad;
 	private Fecha fecha;
-	public Venta(Prenda objeto, int cant, Fecha fechaDeVenta)
-	{
+	private static Fecha fechaActual;
+	
+	public static void setFechaActual(Fecha fechaDeHoy){
+		Venta.fechaActual = fechaDeHoy;
+	}
+	
+	public Venta(Prenda objeto, int cant){
 		prendaVendida = objeto;
 		cantidad = cant;
-		fecha = fechaDeVenta;
+		fecha = fechaActual;
 	}
 	public boolean sucedioEl(Fecha fechaAComparar)
 	{
