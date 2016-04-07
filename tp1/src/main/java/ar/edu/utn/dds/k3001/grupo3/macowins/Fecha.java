@@ -11,12 +11,6 @@ public class Fecha
 		anio = anioF;
 	}
 	
-	public Fecha(){
-		dia = 10;
-		mes = 2;
-		anio = 2016;
-	}
-	
 	public boolean esIgual(Fecha fechaAComparar){
 		boolean igualdad = (fechaAComparar.getDia() == dia && fechaAComparar.getMes() == mes && fechaAComparar.getAnio() == anio);
 		return igualdad;

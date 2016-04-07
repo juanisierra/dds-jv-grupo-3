@@ -1,14 +1,17 @@
 package ar.edu.utn.dds.k3001.grupo3.macowins;
 
 public abstract class Prenda 
-{
-	private static double valorDelNegocio=5;
-	public double precioBase;
-	public double tasaDeImportacion;
-
-	public double precioTotal()
+{	private Marca marca;
+	private static double valorDelNegocio;
+	private double tasaDeImportacion;
+	
+	public double precioParcial()
 	{
-		return ((precioBase + valorDelNegocio) * (1+tasaDeImportacion) );
+		return ((this.precioBase() + valorDelNegocio) * (1+tasaDeImportacion) );
+	}
+	public double precioTotal() 
+	{
+		return marca.importeFinal(this.precioParcial());
 	}
 	public static void setValorDelNegocio(double valorDelNegocio) 
 	{
