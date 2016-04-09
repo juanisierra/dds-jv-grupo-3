@@ -1,13 +1,18 @@
 package ar.edu.utn.dds.k3001.grupo3.macowins;
 
 public abstract class Prenda 
-{	private Marca marca;
+{	protected Marca marca;
 	private static double valorDelNegocio;
-	private double tasaDeImportacion;
+	protected boolean esImportada;
+	public abstract double precioBase();
 	
+	private double tasaImportacion() {
+		if(esImportada==true) return 1.3;
+		return 1;
+	}
 	public double precioParcial()
 	{
-		return ((this.precioBase() + valorDelNegocio) * (1+tasaDeImportacion) );
+		return ((this.precioBase() + valorDelNegocio) * this.tasaImportacion() );
 	}
 	public double precioTotal() 
 	{
@@ -18,7 +23,4 @@ public abstract class Prenda
 		Prenda.valorDelNegocio = valorDelNegocio;
 	}
 	
-	public void esImportada(){
-		tasaDeImportacion = 0.3;
-	}
 }
